@@ -1,13 +1,13 @@
+import React from "react";
 import { Stack } from "@mui/material";
+
 import { categories } from "../utils/constants";
 
-//const selectedCategory = "New";
-
-const Sidebar = ({ selectedCategory, setSelectedCategory }) => (
+const Categories = ({ selectedCategory, setSelectedCategory }) => (
   <Stack
     direction="row"
     sx={{
-      overflow: "auto",
+      overflowY: "auto",
       height: { sx: "auto", md: "95%" },
       flexDirection: { md: "column" },
     }}
@@ -25,7 +25,7 @@ const Sidebar = ({ selectedCategory, setSelectedCategory }) => (
         <span
           style={{
             color: category.name === selectedCategory ? "white" : "red",
-            marginRight: "15px"
+            marginRight: "15px",
           }}
         >
           {category.icon}
@@ -40,4 +40,4 @@ const Sidebar = ({ selectedCategory, setSelectedCategory }) => (
   </Stack>
 );
 
-export default Sidebar;
+export default Categories;
